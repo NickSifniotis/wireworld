@@ -1,0 +1,66 @@
+Notes for assignment 1
+
+First iteration
+
+25 transitions 0.206 transitions
+Base 100 transitions 0.789 seconds
+1000 transitions 7.844 seconds
+
+'brute force' approach - search the list from start to finish, transition
+each element in the list, iff element is conductor then conduct o(n) search
+to find all its neighbours.
+
+Immediate improvement - get rid of all the empty cells
+Mark 2 results
+25 transitions 0.168
+100 transitions 0.627
+1000 transitions 6.193 seconds
+
+Testing langton1 (472 cells)
+Mark 1:
+25 transitions 0.110 seconds
+100 transitions 0.435 seconds
+1000 transitions 4.258 seconds
+
+Mark 2:
+25 transitions 0.096 seconds
+100 transitions 0.363 seconds
+1000 transitions 3.602 seconds
+
+Testing langton3 (4338 cells)
+Mark 1
+25 transitions 9.813 seconds
+No further testing conducted
+
+Mark 2
+25 transitions 6.807 seconds
+No further testing conducted
+
+
+Mark 3 testing - creating a neighbours list and using that rather than scanning the entire world
+default bitmap
+
+25 transitions 0.007 seconds
+100 transitions 0.086 seconds
+1000 transitions 0.950 seconds
+
+langton1
+1000 transitions 0.122 seconds
+100 transitions 0.024 seconds
+25 transitions 0.010 seconds
+
+langton3
+25 transitions 0.042 seconds (!)
+100 transitions 0.915 seconds
+1000 transitions 4.253 seconds (what a jump!)
+
+langton5 (11805 cells)
+25 transitions 0.090
+100 transitions 0.490
+1000 transitions 11.767 seconds
+
+can i do better???
+
+Radix Trie methodology
+
+
